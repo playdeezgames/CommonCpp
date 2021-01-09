@@ -6,5 +6,5 @@ int main(int argc, char** argv)
 	{
 		arguments.push_back(std::string(argv[index]));
 	}
-	return Application::Run(arguments);
+	return tggd::common::Application::Run(arguments);
 }
