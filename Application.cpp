@@ -23,7 +23,7 @@ namespace tggd::common
 		if (s_application)
 		{
 			SDL_Init(SDL_INIT_EVERYTHING);
-			Mix_Init(0);
+			Mix_Init(MIX_INIT_MP3);
 			Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 1024);
 			SDL_CreateWindowAndRenderer(
 				s_application->windowWidth,
