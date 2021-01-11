@@ -12,7 +12,7 @@ namespace tggd::common
 	public:
 		void Finish();
 		void Add(const std::string&, const std::string&);
-		void Play(const std::string&);
+		void Play(const std::string&) const;
 		void SetMuted(bool);
 		bool IsMuted() const;
 	};

@@ -20,11 +20,12 @@ namespace tggd::common
 		sounds[name] = Mix_LoadWAV(filename.c_str());
 	}
 
-	void SoundManager::Play(const std::string& name)
+	void SoundManager::Play(const std::string& name) const
 	{
 		if (!muted)
 		{
-			Mix_PlayChannel(-1/*Constants::Utility::ANY_CHANNEL*/, sounds[name], 0/*Constants::Utility::NO_LOOPS*/);
+			const auto& item = sounds.find(name);
+			Mix_PlayChannel(-1/*Constants::Utility::ANY_CHANNEL*/, item->second , 0/*Constants::Utility::NO_LOOPS*/);
 		}
 	}
 
